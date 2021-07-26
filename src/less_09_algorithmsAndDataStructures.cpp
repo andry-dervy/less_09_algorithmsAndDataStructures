@@ -2,7 +2,7 @@
 // Name        : less_09_algorithmsAndDataStructures.cpp
 // Author      : andry antonenko
 // IDE         : Eclipse IDE
-// Description : lesson 7 of the algorithms and data structures
+// Description : lesson 9 of the algorithms and data structures
 //============================================================================
 
 #include <iostream>
@@ -124,7 +124,6 @@ TItem dequeue(TQueue *q)
 
     pItem->d = 0;
     pItem->p = NO_PRIORITY;
-    //cout << "{" << item.d << ";" << int(item.p) << "} " << endl;
     while(q->Q[q->begin].p == NO_PRIORITY && q->begin != q->end)
     {
       if(++q->begin == q->size) q->begin = 0;
@@ -147,7 +146,6 @@ TItem dequeue(TQueue *q)
 struct TStack
 {
   T *S;
-  //int begin = 0;
   int top = -1;
   int cnt = 0;
   int size = 0;
@@ -242,7 +240,7 @@ void task_1(void)
       }
       cout << endl;
     }
-
+    cout << endl;
     freeQueue(pQueue);
   }
 }
